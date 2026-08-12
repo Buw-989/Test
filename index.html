@@ -10,6 +10,9 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f7fb;
+            .random {
+    background: #f59e0b;
+}
         }
 
         .container {
@@ -73,22 +76,22 @@
 
 <div class="container">
 
-    <h1>Knowledge & Share</h1>
+    <h1>กระทรวงเวทมนต์ศาสตร์</h1>
 
     <div class="cards">
 
-        <!-- Knowledge -->
+        <!-- คำทำนายสำหรับวันนี้ -->
         <div class="card">
-            <h2>📚 Knowledge</h2>
+            <h2>📚 น้อมรับคำทำนาย</h2>
 
             <p>
-                แหล่งรวมของขลัง 1 ตำบล 1 ของขลัง
+                ตัวช่วยแหล่งรวมของขลัง 1 ตำบล 1 ของขลัง
             </p>
 
             <button
                 class="knowledge"
                 onclick="goToKnowledge()">
-                ดูดวงวันนี้
+                คลังของขลัง
             </button>
         </div>
 
@@ -114,7 +117,7 @@
 
             <p>
                 
-                คนดวงดีแห่งปี
+                คนดวงดีแห่งปี 2026
             </p>
 
             <button
@@ -140,7 +143,12 @@
     // ปุ่ม Share
     function goToShare() {
         window.location.href = "share.html";
+
+    // ไปหน้าสุ่มเลข  
     }
+    function goToRandom() {
+    window.location.href = "random.html";
+}
 
 </script>
 
