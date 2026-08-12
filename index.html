@@ -1,131 +1,227 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>สำนักกระทรวงเวทมนต์ศาสตร์</title>
 
+
     <style>
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f7fb;
-            .random {
-    background: #f59e0b;
-}
         }
 
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 80px auto;
             text-align: center;
+            padding: 20px;
         }
+
 
         h1 {
             color: #1e293b;
+            font-size: 36px;
         }
+
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+
+        /* กล่องเมนู */
 
         .cards {
             display: flex;
             gap: 30px;
             justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
             margin-top: 40px;
         }
 
+
         .card {
-            width: 300px;
+            width: 280px;
             padding: 30px;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.1);
+
+            transition: 0.3s;
         }
+
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,0.15);
+        }
+
 
         .card h2 {
             margin-bottom: 15px;
         }
 
+
         .card p {
             color: #64748b;
             line-height: 1.6;
+            min-height: 50px;
         }
+
+
+        /* ปุ่มทั้งหมด */
 
         button {
             border: none;
             padding: 12px 25px;
             border-radius: 10px;
+
             color: white;
+
             font-size: 16px;
+
             cursor: pointer;
+
+            transition: 0.2s;
         }
 
-        .ดูดวงวันนี้ {
+
+        button:hover {
+            opacity: 0.8;
+            transform: scale(1.03);
+        }
+
+
+        /* ปุ่มคลังของขลัง */
+
+        .knowledge {
             background: #2563eb;
         }
+
+
+        /* ปุ่ม Share */
 
         .share {
             background: #16a34a;
         }
 
-        button:hover {
-            opacity: 0.8;
+
+        /* ปุ่มเลขเด็ด */
+
+        .random {
+            background: #f59e0b;
         }
+
+
     </style>
+
 </head>
+
 
 <body>
 
+
 <div class="container">
 
-    <h1>กระทรวงเวทมนต์ศาสตร์</h1>
+
+    <h1>🔮 กระทรวงเวทมนต์ศาสตร์</h1>
+
+    <p class="subtitle">
+        สำนักรวมพลังเวทมนต์ ของขลัง และคำทำนาย
+    </p>
+
 
     <div class="cards">
 
-        <!-- คำทำนายสำหรับวันนี้ -->
+
+        <!-- ========================= -->
+        <!-- คลังของขลัง -->
+        <!-- ========================= -->
+
         <div class="card">
-            <h2>📚 น้อมรับคำทำนาย</h2>
+
+            <h2>🔮 น้อมรับคำทำนาย</h2>
 
             <p>
-                ตัวช่วยแหล่งรวมของขลัง 1 ตำบล 1 ของขลัง
+                ตัวช่วยแหล่งรวมของขลัง
+                1 ตำบล 1 ของขลัง
             </p>
 
             <button
                 class="knowledge"
                 onclick="goToKnowledge()">
-                คลังของขลัง
+
+                📚 คลังของขลัง
+
             </button>
+
         </div>
 
 
+        <!-- ========================= -->
         <!-- Share -->
+        <!-- ========================= -->
+
         <div class="card">
+
             <h2>🤝 Share</h2>
 
-            <div class="card">
-    <h2>🎲 เลขเด็ด</h2>
-
-    <p>
-        สุ่มตัวเลขตั้งแต่ 1 ถึง 9
-        สำหรับใช้งานหรือเล่นสนุก
-    </p>
-
-    <button
-        class="random"
-        onclick="goToRandom()">
-        ไปหน้าสุ่มเลข
-    </button>
-</div>
-
             <p>
-                
                 คนดวงดีแห่งปี 2026
+                มาแบ่งปันเรื่องราวและประสบการณ์
             </p>
 
             <button
                 class="share"
                 onclick="goToShare()">
-                ไปหน้า Share
+
+                🤝 ไปหน้า Share
+
             </button>
+
         </div>
+
+
+        <!-- ========================= -->
+        <!-- เลขเด็ด -->
+        <!-- ========================= -->
+
+        <div class="card">
+
+            <h2>🎲 เลขเด็ด</h2>
+
+            <p>
+                สุ่มตัวเลขตั้งแต่ 1 ถึง 9
+                สำหรับใช้งานหรือเล่นสนุก
+            </p>
+
+            <button
+                class="random"
+                onclick="goToRandom()">
+
+                🎲 ไปหน้าสุ่มเลข
+
+            </button>
+
+        </div>
+
 
     </div>
 
@@ -134,23 +230,46 @@
 
 <script>
 
-    // ปุ่ม ดูดวงวันนี้
+
+    // =====================================
+    // ปุ่ม คลังของขลัง
+    // =====================================
+
     function goToKnowledge() {
-        window.location.href = "knowledge.html";
+
+        window.location.href =
+            "knowledge.html";
+
     }
 
 
+    // =====================================
     // ปุ่ม Share
-    function goToShare() {
-        window.location.href = "share.html";
+    // =====================================
 
-    // ไปหน้าสุ่มเลข  
+    function goToShare() {
+
+        window.location.href =
+            "share.html";
+
     }
+
+
+    // =====================================
+    // ปุ่ม เลขเด็ด
+    // =====================================
+
     function goToRandom() {
-    window.location.href = "random.html";
-}
+
+        window.location.href =
+            "random.html";
+
+    }
+
 
 </script>
 
+
 </body>
+
 </html>
