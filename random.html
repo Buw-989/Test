@@ -104,7 +104,7 @@
         }
 
 
-        /* ปุ่มสุ่ม */
+        /* ปุ่ม น้อมรับคำทำนาย */
 
         .random-button {
 
@@ -178,7 +178,7 @@
     <h1>🎲 Random Number</h1>
 
     <p class="description">
-        กดปุ่มเพื่อสุ่มตัวเลขตั้งแต่ 1 ถึง 9
+        กดปุ่มเพื่อสุ่มตัวเลขตั้งแต่ 1 ถึง 100
     </p>
 
 
@@ -199,7 +199,7 @@
         class="random-button"
         onclick="randomNumber()">
 
-        🎲 สุ่มเลข
+        🎲 เลขเด็ดวันนี้
 
     </button>
 
@@ -223,12 +223,12 @@
 <script>
 
 
-    // ฟังก์ชันสุ่มเลข 1 - 9
+    // ฟังก์ชันสุ่มเลข 1 - 100
 
     function randomNumber() {
 
         const number =
-            Math.floor(Math.random() * 9) + 1;
+            Math.floor(Math.random() * 99) + 1;
 
 
         document.getElementById(
