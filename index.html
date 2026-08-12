@@ -23,83 +23,19 @@
 
 
         html,
-        body {
+       body {
+    margin: 0;
+    min-height: 100vh;
 
-            width: 100%;
-            min-height: 100%;
-
-            margin: 0;
-            padding: 0;
-
-        }
-
-
-        body {
-
-            min-height: 100vh;
-
-            font-family: Arial, sans-serif;
-
-            text-align: center;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-
-            /* 🌈 Rainbow Pastel */
-
-            background: linear-gradient(
-                135deg,
-
-                #ffc4d6,
-                #ffd8b8,
-                #fff3b0,
-                #c8f7c5,
-                #bde7ff,
-                #cfc5ff,
-                #efc7ff,
-                #ffc4d6
-            );
-
-            background-size: 600% 600%;
-
-            animation:
-                rainbow 40s ease-in-out infinite;
-
-        }
-
-
-        /* =========================================
-           🌈 Animation พื้นหลัง
-        ========================================= */
-
-        @keyframes rainbow {
-
-            0% {
-                background-position: 0% 50%;
-            }
-
-            25% {
-                background-position: 50% 0%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            75% {
-                background-position: 50% 100%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-
-        }
-
+    background: linear-gradient(
+        135deg,
+        #b8e8c8,
+        #c9e9c1,
+        #f3d5c8,
+        #f5c6d6,
+        #d8c7e8
+    );
+}
 
         /* =========================================
            Container เต็มหน้าจอ
