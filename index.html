@@ -12,119 +12,197 @@
 
     <style>
 
-       body {
-    font-family: Arial, sans-serif;
+        /* =========================================
+           🌈 พื้นหลังสีรุ้งพาสเทลเคลื่อนไหวช้า ๆ
+        ========================================= */
 
-    background: linear-gradient(
-        135deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet
-    );
+        body {
 
-    background-size: 400% 400%;
+            margin: 0;
 
-    animation: rainbow 10s ease infinite;
+            font-family: Arial, sans-serif;
 
-    text-align: center;
+            min-height: 100vh;
 
-    padding-top: 100px;
-}
-
-
-@keyframes rainbow {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-
-}
-
-
-        .container {
-            max-width: 1100px;
-            margin: 80px auto;
             text-align: center;
-            padding: 20px;
+
+            padding-top: 100px;
+
+            background: linear-gradient(
+                135deg,
+                #ffd6e7,
+                #ffe5c2,
+                #fff8b8,
+                #d9f7be,
+                #c7f0ff,
+                #d9d2ff,
+                #f4d4ff,
+                #ffd6e7
+            );
+
+            background-size: 600% 600%;
+
+            animation:
+                pastelRainbow 25s ease-in-out infinite;
+
         }
 
 
+        /* Animation สีรุ้ง */
+
+        @keyframes pastelRainbow {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 50% 0%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            75% {
+                background-position: 50% 100%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+
+        }
+
+
+        /* =========================================
+           Container
+        ========================================= */
+
+        .container {
+
+            max-width: 1100px;
+
+            margin: 80px auto;
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+
+        /* =========================================
+           หัวข้อ
+        ========================================= */
+
         h1 {
-            color: #1e293b;
+
+            color: #374151;
+
             font-size: 36px;
+
+            text-shadow:
+                0 2px 5px
+                rgba(255,255,255,0.7);
+
         }
 
 
         .subtitle {
+
             color: #64748b;
+
             margin-bottom: 40px;
+
         }
 
 
-        /* กล่องเมนู */
+        /* =========================================
+           กล่องเมนู
+        ========================================= */
 
         .cards {
+
             display: flex;
+
             gap: 30px;
+
             justify-content: center;
+
             align-items: stretch;
+
             flex-wrap: wrap;
+
             margin-top: 40px;
+
         }
 
 
         .card {
+
             width: 280px;
+
             padding: 30px;
-            background: white;
+
+            background: rgba(255,255,255,0.90);
+
             border-radius: 20px;
 
             box-shadow:
-                0 5px 20px
-                rgba(0,0,0,0.1);
+                0 8px 25px
+                rgba(100,100,100,0.12);
 
-            transition: 0.3s;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            backdrop-filter: blur(5px);
+
         }
 
 
         .card:hover {
-            transform: translateY(-5px);
+
+            transform: translateY(-8px);
 
             box-shadow:
-                0 10px 25px
-                rgba(0,0,0,0.15);
+                0 15px 30px
+                rgba(100,100,100,0.18);
+
         }
 
 
         .card h2 {
+
             margin-bottom: 15px;
+
+            color: #374151;
+
         }
 
 
         .card p {
+
             color: #64748b;
+
             line-height: 1.6;
+
             min-height: 50px;
+
         }
 
 
-        /* ปุ่มทั้งหมด */
+        /* =========================================
+           ปุ่มทั้งหมด
+        ========================================= */
 
         button {
+
             border: none;
+
             padding: 12px 25px;
+
             border-radius: 10px;
 
             color: white;
@@ -134,33 +212,49 @@
             cursor: pointer;
 
             transition: 0.2s;
+
         }
 
 
         button:hover {
-            opacity: 0.8;
-            transform: scale(1.03);
+
+            opacity: 0.85;
+
+            transform: scale(1.05);
+
         }
 
 
-        /* น้อมรับคำทำนาย🌞 */
+        /* =========================================
+           ปุ่มคำทำนาย
+        ========================================= */
 
         .knowledge {
-            background: #2563eb;
+
+            background: #93c5fd;
+
         }
 
 
-        /* ปุ่ม ของดีบอกต่อ */
+        /* =========================================
+           ปุ่ม Share
+        ========================================= */
 
         .share {
-            background: #16a34a;
+
+            background: #86efac;
+
         }
 
 
-        /* ปุ่มเลขเด็ด */
+        /* =========================================
+           ปุ่มเลขเด็ด
+        ========================================= */
 
         .random {
-            background: #f59e0b;
+
+            background: #fcd34d;
+
         }
 
 
@@ -177,8 +271,11 @@
 
     <h1>🔮 กระทรวงเวทมนต์ศาสตร์</h1>
 
+
     <p class="subtitle">
+
         สำนักรวมพลังเวทมนต์ ของขลัง และคำทำนาย
+
     </p>
 
 
@@ -186,7 +283,7 @@
 
 
         <!-- ========================= -->
-        <!-- คลังของขลัง -->
+        <!-- คำทำนาย -->
         <!-- ========================= -->
 
         <div class="card">
@@ -194,7 +291,9 @@
             <h2>🔮 คำทำนาย</h2>
 
             <p>
-ดวงวันนี้ ดีแน่นอลลลลล
+
+                ดวงวันนี้ ดีแน่นอลลลลล
+
             </p>
 
             <button
@@ -217,8 +316,10 @@
             <h2>🤝 Share</h2>
 
             <p>
+
                 คนดวงดีแห่งปี 2026
                 มาแบ่งปันเรื่องราวและประสบการณ์
+
             </p>
 
             <button
@@ -241,8 +342,10 @@
             <h2>🎲 เลขเด็ด</h2>
 
             <p>
+
                 สุ่มตัวเลขตั้งแต่ 1 ถึง 100 🙏
                 สำหรับเลขที่คิดว่าอาจจะออกงวดนี้ 🔮
+
             </p>
 
             <button
@@ -265,7 +368,7 @@
 
 
     // =====================================
-    // ปุ่ม คลังของขลัง
+    // ปุ่ม คำทำนาย
     // =====================================
 
     function goToKnowledge() {
