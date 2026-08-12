@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge & Share</title>
+    <title>สำนักกระทรวงเวทมนต์ศาสตร์</title>
 
     <style>
         body {
@@ -55,7 +55,7 @@
             cursor: pointer;
         }
 
-        .knowledge {
+        .ดูดวงวันนี้ {
             background: #2563eb;
         }
 
@@ -82,14 +82,13 @@
             <h2>📚 Knowledge</h2>
 
             <p>
-                แหล่งรวมความรู้ บทเรียน
-                และข้อมูลสำหรับการพัฒนาทักษะ
+                แหล่งรวมของขลัง 1 ตำบล 1 ของขลัง
             </p>
 
             <button
                 class="knowledge"
                 onclick="goToKnowledge()">
-                ดู Knowledge
+                ดูดวงวันนี้
             </button>
         </div>
 
@@ -98,9 +97,24 @@
         <div class="card">
             <h2>🤝 Share</h2>
 
+            <div class="card">
+    <h2>🎲 เลขเด็ด</h2>
+
+    <p>
+        สุ่มตัวเลขตั้งแต่ 1 ถึง 9
+        สำหรับใช้งานหรือเล่นสนุก
+    </p>
+
+    <button
+        class="random"
+        onclick="goToRandom()">
+        ไปหน้าสุ่มเลข
+    </button>
+</div>
+
             <p>
-                แบ่งปันความรู้ ประสบการณ์
-                และไอเดียให้กับเพื่อนร่วมงาน
+                
+                คนดวงดีแห่งปี
             </p>
 
             <button
@@ -117,7 +131,7 @@
 
 <script>
 
-    // ปุ่ม Knowledge
+    // ปุ่ม ดูดวงวันนี้
     function goToKnowledge() {
         window.location.href = "knowledge.html";
     }
