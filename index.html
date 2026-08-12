@@ -3,62 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>อัลป้าก้าทรงกบ🕶️</title>
+    <title>Knowledge & Share</title>
 
     <style>
-        
-body { text-align: center; }
-body { margin: 0; min-height: 100vh; /* พื้นหลังสีชมพู */ background: linear-gradient( 135deg, #ffd1e8, #ff69b4 ); font-family: Arial, sans-serif; }
-       {
+        body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: ##ffe4f0;
+            background: #f4f7fb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 80px auto;
             text-align: center;
-            padding-top: 100px;
         }
 
         h1 {
-            color: #ffe4f0;
-            font-size: 40px;
+            color: #1e293b;
         }
 
-        p {
-            color: #555;
-            font-size: 20px;
+        .cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            width: 300px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.6;
         }
 
         button {
-            background: #ffe4f0;
-            color: pink;
             border: none;
             padding: 12px 25px;
             border-radius: 10px;
+            color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
+        .knowledge {
+            background: #2563eb;
+        }
+
+        .share {
+            background: #16a34a;
+        }
+
         button:hover {
-            background: #ffe4f0;
+            opacity: 0.8;
         }
     </style>
 </head>
 
 <body>
-    <h1>🐸 สวัสดีครับ🐸</h1>
- <h1> ☕☕ 🦙🦙🦙อัลป้าก้าชอบกินอเมกาโน่🦙🦙🦙 </h1>
-    <h1> 🐸🐸🐸ขอให้วันนี้เป็นวันที่ดีนะครับชาวโลก🐸🐸🐸</h1>
-    <p>ผมคือกบที่ชอบกินอเมกาโน่มากครับ บางครั้งก็ชอบกินกบทอดค่าบบบบบบ 🕶️</p>
-<p>ขอให้ทุกคนถืกเลขนะค่าบวันที่ 16 สิงหาคมนี้ 🪙🪙🪙 </p>
-    <button onclick="showMessage()">
-        เริ่มเลอออ
-    </button>
-window.location.href = "knowledge.html";
-    <script>
-        function showMessage() {
-            alert("HTML ทำงานเรียบร้อยแล้วครับ! 🚀");
-        }
-    </script>
+
+<div class="container">
+
+    <h1>Knowledge & Share</h1>
+
+    <div class="cards">
+
+        <!-- Knowledge -->
+        <div class="card">
+            <h2>📚 Knowledge</h2>
+
+            <p>
+                แหล่งรวมความรู้ บทเรียน
+                และข้อมูลสำหรับการพัฒนาทักษะ
+            </p>
+
+            <button
+                class="knowledge"
+                onclick="goToKnowledge()">
+                ดู Knowledge
+            </button>
+        </div>
+
+
+        <!-- Share -->
+        <div class="card">
+            <h2>🤝 Share</h2>
+
+            <p>
+                แบ่งปันความรู้ ประสบการณ์
+                และไอเดียให้กับเพื่อนร่วมงาน
+            </p>
+
+            <button
+                class="share"
+                onclick="goToShare()">
+                ไปหน้า Share
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // ปุ่ม Knowledge
+    function goToKnowledge() {
+        window.location.href = "knowledge.html";
+    }
+
+
+    // ปุ่ม Share
+    function goToShare() {
+        window.location.href = "share.html";
+    }
+
+</script>
 
 </body>
 </html>
-
